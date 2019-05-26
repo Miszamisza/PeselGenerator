@@ -21,9 +21,8 @@ public class DataController {
     }
 
     @PostMapping("/pesel_generate")
-    public int[] peselGenerator(@RequestBody UserDataGenerator userDataGenerator){
-        return dataService.peselGenerator(userDataGenerator.getDayOfBirth(), userDataGenerator.getMonthOfBirth(), userDataGenerator.getMonthOfBirth(),
-                userDataGenerator.getSex());
+    public int[] peselGenerator(int dayOfBirth, int monthOfBirth, int yearOfBirth, String sex){
+        return dataService.peselGenerator(dayOfBirth, monthOfBirth, yearOfBirth, sex);
     }
 
     @GetMapping("/pesel_check")
