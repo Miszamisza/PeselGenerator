@@ -9,6 +9,5 @@ import javax.validation.constraints.NotEmpty;
 @Data
 public class UserDataCheck {
 
-    @NotEmpty
-    private int[] pesel;
+    private Long pesel;
 }

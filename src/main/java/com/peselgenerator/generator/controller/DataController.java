@@ -20,14 +20,14 @@ public class DataController {
         this.dataService = dataService;
     }
 
-    @PostMapping("/pesel_generate")
-    public int[] peselGenerator(int dayOfBirth, int monthOfBirth, int yearOfBirth, String sex){
+    @GetMapping("/pesel_gene")
+    public String peselGenerator(int dayOfBirth, int monthOfBirth, int yearOfBirth, String sex){
         return dataService.peselGenerator(dayOfBirth, monthOfBirth, yearOfBirth, sex);
     }
 
-    @GetMapping("/pesel_check")
-    public String peselCheck(@RequestBody UserDataCheck userDataCheck){
-        return dataService.peselCheck(userDataCheck.getPesel());
+    @GetMapping("/pesel_che")
+    public String peselCheck(Long pesel){
+        return dataService.peselCheck(pesel);
     }
 
 }

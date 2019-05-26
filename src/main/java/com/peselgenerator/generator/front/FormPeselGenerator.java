@@ -11,21 +11,21 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@Route("pesel_generator")
+@Route("pesel_generate")
 public class FormPeselGenerator extends VerticalLayout {
 
-    TextField textFieldDay = new TextField();
-    Label labelday = new Label("Day: ");
+    private TextField textFieldDay = new TextField();
+    private Label labelday = new Label("Day: ");
 
-    TextField textFieldMonth = new TextField();
-    Label labelmonth = new Label("Month: ");
+    private TextField textFieldMonth = new TextField();
+    private Label labelmonth = new Label("Month: ");
 
-    TextField textFieldYear = new TextField();
-    Label labelyear = new Label("Year: ");
+    private TextField textFieldYear = new TextField();
+    private Label labelyear = new Label("Year: ");
 
-    RadioButtonGroup<String> group = new RadioButtonGroup<>();
+    private RadioButtonGroup<String> group = new RadioButtonGroup<>();
 
-    Button button = new Button("Submit");
+    private Button button = new Button("Submit");
 
     @Autowired
     DataController dataController;
